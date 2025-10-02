@@ -1,6 +1,6 @@
 // Pins for the LEDs
 int ledPins[] = {2, 3, 4, 5};  // change these to your LED pin numbers
-int numLeds = 4;
+int numLeds = 4; //8
 
 void setup() {
   // set all LED pins as outputs
@@ -10,6 +10,7 @@ void setup() {
 }
 
 void loop() {
+  int j = 0;
   
   while (j < numLeds) {
     digitalWrite(ledPins[j], HIGH);  // turn on LED
