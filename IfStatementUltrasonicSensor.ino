@@ -5,7 +5,7 @@ const int thresh_dist =10;
 void setup(){
 pinMode(trig_pin, OUTPUT);
 pinMode(echo_pin, INPUT);
-pinMode(LED_BUILTIN, OUTPUT);
+pinMode(4, OUTPUT);
 Serial.begin(9600); // starts the serial communication
 }
 void loop(){
@@ -26,9 +26,9 @@ void loop(){
   Serial.println(distance);
 
   if (distance <= thresh_dist ) {
-     digitalWrite(LED_BUILTIN, HIGH);
+     digitalWrite(4, HIGH);
   } else {
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(4, LOW);
  }
 
 delay(100);
